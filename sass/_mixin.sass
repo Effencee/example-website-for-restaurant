@@ -1,0 +1,25 @@
+=flexDisplay($alignItems, $justifyContent)
+    display: flex
+    align-items: $alignItems
+    justify-content: $justifyContent
+
+=widthHeight($width, $height)
+    width: $width
+    height: $height
+
+=marginEverySide($top : 0, $right : 0, $bottom : 0, $left : 0)
+    margin: $top $right $bottom $left
+
+=positionTopLeft($position, $top : 0, $left : 0)
+    position: $position
+    top: $top
+    left: $left
+
+=centerX($left: 50%, $translateX : -50%)
+    left: $left
+    transform: translateX($translateX)
+
+=centerXY($left: 50%, $top: 50%, $translate : -50%)
+    left: $left
+    top: $top
+    transform: translate($translate, $translate)

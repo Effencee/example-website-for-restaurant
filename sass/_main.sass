@@ -1,0 +1,81 @@
+.main
+    +widthHeight(100%, 200vh)
+    +positionTopLeft(relative, 100vh, 0)
+    background-color: #303030
+    &__title
+        text-align: center
+        position: relative
+        top: 20vh
+        color: white
+        font-size: 40px
+    &__sectionAbout
+        +widthHeight(80%, 40vh)
+        position: relative
+        top: 40vh
+        +centerX
+        box-shadow: 0 10px 25px 5px black
+    &__sectionAboutLeft
+        +widthHeight(40%, 100%)
+        position: absolute
+        background-color: black
+        border-right: solid 1px black
+    &__leftElement
+        +widthHeight(calc(50% - 2px), calc(50% - 2px))
+        position: absolute
+        transition: .5s
+        &--active
+            z-index: 2
+        &:nth-child(1)
+            left: 0
+            top: 0
+        &:nth-child(2)
+            right: 0
+            top: 0
+        &:nth-child(3)
+            left: 0
+            bottom: 0  
+        &:nth-child(4)
+            right: 0
+            bottom: 0 
+        &:hover
+            +widthHeight(100%, 100%)
+    &__sectionAboutRight
+        +widthHeight(calc(60% - 1px), 100%)
+        position: absolute
+        background-color: gray
+        right: 0
+    &__rightP
+        padding: 30px
+        text-align: justify
+        color: white
+    &__eventsPhoto
+        +widthHeight(100%, 50vh)
+        position: relative
+        top: 70vh
+        display: flex
+        justify-content: space-around
+    &__photoEventElement
+        +widthHeight(calc(99% / 3), 100%)
+        background-color: red
+        position: relative
+        overflow: hidden  
+    &__photoEvent
+        position: absolute
+        opacity: 1
+        +widthHeight(100%, 100%)
+        transition: .5s
+        &--active
+            transform: scale(1.5) rotate(20deg)
+            opacity: 0.5
+    &__eventTitle
+        position: absolute
+        font-size: 40px
+        color: white
+        +centerX
+        top: 30%
+        visibility: hidden
+        transition: .3s
+        &--active
+            visibility: visible 
+            top: 50%
+            +centerXY

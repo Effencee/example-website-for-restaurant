@@ -1,0 +1,33 @@
+.gallery
+    +widthHeight(100%, 100vh)
+    position: relative
+    top: 100vh
+    background-color: #303030
+    &__title
+        padding-top: 10vh
+        font-size: 30px
+        color: white
+        text-align: center 
+    &__photo
+        +widthHeight(50%, 50vh)
+        position: relative
+        left: 25%
+        margin-top: 5vh
+        border: 1vh solid black
+        transition: .5s
+    &__prev,&__next
+        color: black
+        font-size: 50px
+        font-weight: bolder
+        cursor: pointer
+        position: absolute
+        top: 1vh
+    &__prev
+        left: 2vh
+        z-index: 2
+    &__next
+        right: 2vh
+        z-index: 2
+    &__img
+        position: absolute
+        +widthHeight(100%, 100%)

@@ -1,0 +1,23 @@
+.nav
+    +flexDisplay(center, space-between) //align-items and justify-content
+    // +marginEverySide(20px) //top, right, bottom, left [every side is set on 0 if dont give own parameters]
+    +widthHeight(100%, 10vh)
+    z-index: 100
+    transition: .5s
+    &__logo
+        font-size: $navFontSize * 1.5
+        margin-left: 20px
+        width: 60%
+        color: white
+    &__ulList
+        list-style-type: none
+        display: flex
+        flex: 1
+        justify-content: space-around
+        font-size: $navFontSize
+        font-weight: bold
+    &__link
+        text-decoration: none
+        color: white
+        &:hover
+            color: red

@@ -1,0 +1,45 @@
+.section
+    +widthHeight(100%, 100vh)
+    position: relative
+    top: 100vh
+    background-color: #303030
+    &__title
+        padding-top: 10vh
+        color: white
+        text-align: center
+        width: 100%
+        font-size: 40px
+        font-weight: bolder
+    &__list
+        margin-top: 10vh
+        list-style-type: none
+        +widthHeight(100%,15vh)
+        display: flex
+        justify-content: space-around
+        align-items: center
+        font-size: 30px
+        color: white
+    &__listElem
+        // border: 0 5px 5px 5px solid black
+        text-align: center
+        width: 20%
+        line-height: 15vh
+        border-bottom: 5px solid black
+        border-left: 5px solid black
+        border-right: 5px solid black
+        transition: .5s
+        &--active
+            background-color: #606060
+        &:hover
+            cursor: pointer
+            background: #606060
+    &__dish
+        +widthHeight(100%,50vh)
+        position: absolute
+        bottom: 0
+        font-size: 30px
+        color: white
+        text-align: center
+        display: none
+    &__dish--active
+        display: block

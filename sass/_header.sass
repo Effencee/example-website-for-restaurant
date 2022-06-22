@@ -1,0 +1,27 @@
+.header
+    +widthHeight(100%, 100vh)
+    background-image: url(../img/banner.jpg)
+    background-size: cover
+    background-repeat: no-repeat
+    background-attachment: fixed
+    // background-position: center
+    +positionTopLeft(absolute)
+    z-index: -1
+    &__title
+        +widthHeight(30vw, 10vh)
+        +positionTopLeft(absolute, 60%, 50%)
+        transform: $centerX
+        background-color: #6d6d23
+        border: none
+        border-radius: 50px
+        font-size: 25px
+        font-weight: bold
+        color: white
+        text-align: center
+        line-height: 10vh
+        box-shadow: 0px 20px 35px 0 #6d6d23
+        z-index: 1
+    &__cursor
+        opacity: 0
+        &--active
+            opacity: 1
